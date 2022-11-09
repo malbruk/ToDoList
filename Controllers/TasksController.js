@@ -11,6 +11,10 @@ const TasksController = {
 
     add:(req,res)=>{
         
+    },
+
+    update:(req,res)=>{
+        
     }
 }
 
