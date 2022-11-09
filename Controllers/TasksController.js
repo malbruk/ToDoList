@@ -9,7 +9,9 @@ const TasksController = {
         res.send('get task by id ' +  req.params.id)
     },
 
-
+    add:(req,res)=>{
+        
+    }
 }
 
 export default TasksController;
