@@ -43,8 +43,6 @@ app.get('/', (req, res) => {
 
 app.use('/tasks', tasksRouter);
 
-
-
 app.listen(port, () => {
     console.log(`my app is running`)
 })
