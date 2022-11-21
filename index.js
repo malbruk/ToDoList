@@ -35,6 +35,7 @@ function auth(req, res, next){
 }
 
 
+app.use('/', auth);
 //endpoint - פונקציה שחשופה לקריאות מהקליינט
 app.get('/', (req, res) => {
     res.send('מה נשמע? ברוך ה')
@@ -42,7 +43,7 @@ app.get('/', (req, res) => {
 
 app.get('/tasks/', TasksController.getList);
 
-app.use('/', auth);
+
 app.get('/tasks/:id', middleware, TasksController.getById)
 
 app.post('/tasks', (req, res) => {
@@ -59,7 +60,7 @@ app.delete('/tasks/:id', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log(`my app listening on port http://localhost:${port}`)
+    console.log(`my app is running`)
 })
 
 /*
