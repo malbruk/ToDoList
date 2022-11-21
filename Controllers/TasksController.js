@@ -1,10 +1,13 @@
+import data from '../data.js'
 const TasksController = {
     getList: (req, res)=>{
-        console.log(req.query);
+        console.log('getList');
         res.send(JSON.stringify(data))
     },
 
     getById: (req, res) => {
+        console.log('getById');
+        console.log('req.user',req.user)
             //console.log('get task by id req', req.params.id);
         res.send('get task by id ' +  req.params.id)
     },
